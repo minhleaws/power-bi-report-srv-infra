@@ -1,0 +1,3 @@
+creation_rules:
+- path_regex: .*.yaml
+  pgp: 5B18C170DCEBB51B286EA97FE8B412110DBA2761
