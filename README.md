@@ -73,10 +73,10 @@ Structure Layout:
 ### How To
 
 ```sh
-cd terraform/environments.poc
+cd terraform/environments/poc
 make init    # initial
-make plan    # see the plan
-make apply   # deploy
+make plan    # see plan
+make apply   # apply plan
 make destroy # clean-up environment
 ```
 
