@@ -118,3 +118,16 @@ resource "azuredevops_build_definition" "pbirs" {
     yml_path    = "azure-pipeline.yaml"
   }
 }
+
+## Authorization Pipeline 
+resource "azuredevops_resource_authorization" "aks" {
+  project_id  = azuredevops_project.power_bi.id
+  resource_id = azuredevops_serviceendpoint_kubernetes.powerbipoc.id
+  authorized  = true
+}
+
+resource "azuredevops_resource_authorization" "acr" {
+  project_id  = azuredevops_project.power_bi.id
+  resource_id = azuredevops_serviceendpoint_dockerregistry.powerbipoc.id
+  authorized  = true
+}
